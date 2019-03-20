@@ -4,9 +4,14 @@ const Schema = mongoose.Schema
 const songSchema = new Schema({
     songName: {
         type: String,
+        required: true
+    },
+    albumID: {
+        type: String,
+        required: true
     }
 })
 
 
 
-moduile.exports = mongoose.model("Song",songSchema)
+module.exports = mongoose.model("Song",songSchema)

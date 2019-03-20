@@ -4,9 +4,15 @@ const Schema = mongoose.Schema
 const artistSchema = new Schema({
     artistName: {
         type: String,
+        required: true,
+
+    },
+    genre: {
+        type: String, 
+        required: true
     }
 })
 
 
 
-moduile.exports = mongoose.model("Artist", artistSchema)
+module.exports = mongoose.model("Artist", artistSchema)

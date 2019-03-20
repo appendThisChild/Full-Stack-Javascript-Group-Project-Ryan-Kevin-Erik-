@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 app.use(express.json())
 app.use(morgan('dev'))
 
-mongoose.connect('// Something here... //', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/artist', {useNewUrlParser: true}, () => {
     console.log('[o] Connected to the DB')
 }) 
 
@@ -18,12 +18,15 @@ mongoose.connect('// Something here... //', {useNewUrlParser: true}, () => {
 // - selected artist by identifyer ... 
 // 
 
-app.use((err, req, res, next) => {
-    console.error(err)
-    return res.send({errMsg: err.message})
-})
+// app.use((err, req, res, next) => {
+//     console.error(err)
+//     return res.send({errMsg: err.message})
+// })
+app.use('/artist', require('./routes/artistRoutes.js'))
+app.use('/album', require('./routes/albumRoutes.js'))
+app.use('/song', require('./routes/songRoutes.js') )
 
 
-app.listen(6500, () => {
-    console.log(' Server is running on Port 6500')
+app.listen(7000, () => {
+    console.log(' Server is running on Port 7000')
 })
