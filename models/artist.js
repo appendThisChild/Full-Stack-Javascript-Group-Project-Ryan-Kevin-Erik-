@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const artistSchema = new Schema({
     artistName: {
         type: String,
-    },
+    }
 })
 
 

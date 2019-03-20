@@ -6,13 +6,18 @@ const mongoose = require('mongoose')
 app.use(express.json())
 app.use(morgan('dev'))
 
+mongoose.connect('// Something here... //', {useNewUrlParser: true}, () => {
+    console.log('[o] Connected to the DB')
+}) 
 
+// Our routes
+// -
+// - 
 
-
-
-.catch(err => console.error(err))
-
-
+app.use((err, req, res, next) => {
+    console.error(err)
+    return res.send({errMsg: err.message})
+})
 
 
 app.listen(6500, () => {

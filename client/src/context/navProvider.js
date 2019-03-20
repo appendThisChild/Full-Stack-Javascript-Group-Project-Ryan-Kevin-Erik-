@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 const NavContext = React.createContext()
 
 export class NavProvider extends Component {
+    
     state = {
         greeting: 'Hello World'
     }
+
     render() {
         return (
             <NavContext.Provider value={this.state}>
