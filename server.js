@@ -11,8 +11,12 @@ mongoose.connect('// Something here... //', {useNewUrlParser: true}, () => {
 }) 
 
 // Our routes
-// -
-// - 
+// - search ... get .. searching for specific artist by name or genre
+// 
+// - liked ... get, post, delete .. user's liked playlist
+//
+// - selected artist by identifyer ... 
+// 
 
 app.use((err, req, res, next) => {
     console.error(err)

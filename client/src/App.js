@@ -7,11 +7,21 @@ import {withNav} from './context/navProvider'
 
 class App extends Component {
     state = {}
+
+    
+
     render() {
         return (
             <Header>
                 <Navbar />
             </Header>
+            // switch
+                // liked 
+                // link to searched
+                // selected artist 
+            // switch
+            // user links 
+            // play bar
         );
     }
 }
